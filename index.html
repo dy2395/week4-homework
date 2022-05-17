@@ -1,54 +1,91 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Coding Quiz Challenge</title>
-  <link rel="stylesheet" href="./assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
-
-  <header>
-    
-  </header>
-
-  <h1 class="page-title">Coding Quiz Challenge</h1>
-    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answer will penalize your screen time by 10 seconds! </p>
-    <button class="btn" id="start-button">Start Quiz</button>
-
-    <div id="quiz"></div>
    
 
-    <h1 id="ending">All done!</h1>
+    <!-- Info Box -->
+    <div class="info_box">
+
+        <div class="info-title"><span>Coding Quiz Challenge</span></div>
+        <div class="info-list">
+            <div class="info">You will have <span>30 seconds</span> to answer 3 code-related questions.</div>
+            <div class="info">Keep in mind that incorrect answer will penalize your screen time by <span>10 seconds</span>.</div>
+            <div class="info">You'll get 10 points for each correct answer.</div>
+        </div>
+
+        <div class="buttons">
+            <!-- start Quiz button -->
+            <button class="start">Start Quiz</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Coding Quiz Challenge</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">30</div>
+            </div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="complete_text">All done!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+
+        <form id="record-form">
+              <input type="text" name="score-name" placeholder="Enter Your Initials" />  
+        </form>
+        <button class="submit">Submit</button>
+    </div>
+
+    <!-- Highscore Record Box -->
+    <div class="record_box">
+        <div class="record_title">Highscores</div>
+        
+            <section class="list-wrapper">
+              <ol id="score-list"></ol>
+            </section>
+          
+          <div class="buttons">
+              <button class="restart">Restart Quiz</button>
+              <button class="clear">Clear Records</button>
+          </div>
+    </div>
 
 
-    <form id="record-form">
-      <div class="form-group">
-        <input type="text" name="score-name" placeholder="Enter Your Initials" />
-      </div>
-      
-      <div class="form-group">
-        <button class="btn" id="save-record" type="submit">Submit</button>
-      </div>
-    </form>
-  <main class="page-content">
-    <section class="list-wrapper">
-      <h2 class="list-title">Highscores</h2>
-      <ul class="score-list" id="score-list"></ul>
+    <!-- JavaScript file with Questions and Options only -->
+    <script src="assets/questions.js"></script>
 
-    </section>
-  </main>
+    <!-- JavaScript file with all Quiz Codes -->
+    <script src="assets/script.js"></script>
 
-  <button class="btn" id="start-button">Start Quiz</button>
-
-  <footer>
-    &copy;2022 by Danqi Yin
-  </footer>
-
-  <script src="./assets/script.js"></script>
 </body>
-
 </html>
